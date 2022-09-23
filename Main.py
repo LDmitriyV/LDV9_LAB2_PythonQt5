@@ -40,8 +40,10 @@ class Main(QDialog):
                 answer = x + 4 / a ** 2 + b ** 2
             else:
                 answer = x*((a+b)**2)
+            self.label_answer.setStyleSheet("QLabel {color: Green}")
             self.label_answer.setText('Ответ: ' + str(format(answer, '.2f')))
         except:
+            self.label_answer.setStyleSheet("QLabel {color: Red}")
             self.label_answer.setText(
                 'Ошибка!')
 
